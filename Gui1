@@ -1,0 +1,56 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ESP = Instance.new("TextButton")
+local Container = Instance.new("TextButton")
+local BringItem = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.00853485055, 0, 0.359663874, 0)
+Frame.Size = UDim2.new(0, 40, 0, 120)
+Frame.Active = true
+Frame.Draggable = true
+
+ESP.Name = "ESP"
+ESP.Parent = Frame
+ESP.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+ESP.Position = UDim2.new(0.150000006, 0, 0.0480000004, 0)
+ESP.Size = UDim2.new(0, 28, 0, 30)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(0, 0, 0)
+ESP.TextSize = 14.000
+ESP.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Baseplate-LUA/DecayingWinter/main/ItemESP.lua"), true))()
+end)
+
+Container.Name = "Container"
+Container.Parent = Frame
+Container.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Container.Position = UDim2.new(0.150000095, 0, 0.376000047, 0)
+Container.Size = UDim2.new(0, 28, 0, 30)
+Container.Font = Enum.Font.SourceSans
+Container.Text = "Box"
+Container.TextColor3 = Color3.fromRGB(0, 0, 0)
+Container.TextSize = 14.000
+Container.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/TurtleCrazy150/DecayingWinter/main/Container"), true))()
+end)
+
+BringItem.Name = "BringItem"
+BringItem.Parent = Frame
+BringItem.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+BringItem.Position = UDim2.new(0.150000572, 0, 0.688000023, 0)
+BringItem.Size = UDim2.new(0, 28, 0, 30)
+BringItem.Font = Enum.Font.SourceSans
+BringItem.Text = "Bring"
+BringItem.TextColor3 = Color3.fromRGB(0, 0, 0)
+BringItem.TextSize = 14.000
+BringItem.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/TurtleCrazy150/DecayingWinter/main/BringItem"), true))()
+end)
